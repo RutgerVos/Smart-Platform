@@ -35,7 +35,7 @@
                 </div>
         </header>
 
-    <div class="py-6 bg-gray-700">
+    <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-xl sm:rounded-lg p-5">
                 <p class="text-center">Welkom bij de Smart Platform applicatie</p>
@@ -49,15 +49,15 @@
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
       <img class="w-full" src="https://ae01.alicdn.com/kf/H6aae0f2645a84ff4be37b46c635bd4fay/Geeetech-Multicolor-3D-Printer-2-In-1-Out-A10M-Met-Twee-Extruders-Auto-Leveling-breken-Hervatten.jpg" alt="placeholder">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Open Dag</div>
-        <p class="text-gray-700 text-base">
+        <div class="text-center font-bold text-xl mb-2">Open Dag(test event)</div>
+        <p class=" text-center text-gray-700 text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
         </p>
       </div>
       <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#3d printers</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#robots</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#mirco controllers</span>
+        <span class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#3d printers</span>
+        <span class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#robots</span>
+        <span class="text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#mirco controllers</span>
       </div>
     </div>
   </div>
@@ -66,21 +66,21 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img
-            class="object-cover w-full h-96"
+            class="object-cover w-full h-full"
             src="https://source.unsplash.com/user/erondu/3000x900"
             alt="apple watch photo"
           />
         </div>
         <div class="swiper-slide">
           <img
-            class="object-cover w-full h-96"
+            class="object-cover w-full h-full"
             src="https://source.unsplash.com/collection/190727/3000x900"
             alt="apple watch photo"
           />
         </div>
         <div class="swiper-slide">
           <img
-            class="object-cover w-full h-96"
+            class="object-cover w-full h-full"
             src="https://source.unsplash.com/collection/190728/3000x900"
             alt="apple watch photo"
           />
@@ -111,5 +111,5 @@
       });
     </script>
   </body>
-  <footer class="text-center">©  {{ date("Y") }} Copyright.</footer>
+  <footer class="text-center">©  {{ date("Y") }} Lab23 Copyright.</footer>
 </x-guest-layout>
