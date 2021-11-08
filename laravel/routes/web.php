@@ -22,5 +22,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/Events', function () {
-    return view('event.index');
+    return view('events.index');
 })->name('Events');
