@@ -17,6 +17,8 @@
   [x-cloak] {
     display: none;
   }
+
+#example, #features { display: block; margin-top: 2em; }
 </style>
 
 <div class="antialiased sans-serif bg-gray-100 h-screen">
