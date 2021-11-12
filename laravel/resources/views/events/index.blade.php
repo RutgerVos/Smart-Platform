@@ -188,13 +188,13 @@
       events: [
         {
           event_date: new Date(2021, 10, 13),
-          event_title: "April Fool's Day",
+          event_title: "April event",
           event_theme: 'blue'
         },
 
         {
           event_date: new Date(2021, 10, 12),
-          event_title: "Birthday",
+          event_title: "Birthday event",
           event_theme: 'red'
         },
 
