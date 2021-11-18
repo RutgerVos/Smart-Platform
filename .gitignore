@@ -23,3 +23,11 @@ Homestead.json
 .phpunit.result.cache
 
 laravel/composer.lock
+
+laravel/package.json
+
+laravel/package-lock.json
+
+laravel/composer.json
+
+laravel/public/vendor

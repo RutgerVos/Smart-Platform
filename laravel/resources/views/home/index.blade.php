@@ -1,32 +1,12 @@
-<title>Smart Platform/homepage</title>
-<head> 
-<meta charset="utf-8"/> 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"/>
-      <!-- ,minimum-scale=1, maximum-scale=1 -->
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"/>
-    <!--  Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-</head>
-    @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-             @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+@extends('layouts.app')
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-             @endauth
-                </div>
-    @endif
-<x-guest-layout>
+@section('Styles')
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" />
+@endsection
+
+@section('content')
+
         <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -40,7 +20,7 @@
             <div class=" overflow-hidden shadow-xl sm:rounded-lg p-5">
                 <p class="text-center">Welkom bij de Smart Platform applicatie</p>
                 <br>
-                <p class="text-center">Dit is de index pagina</p>
+                <p class="text-center">Dit is de home pagina</p>
             </div>
         </div>
     </div>
@@ -61,7 +41,6 @@
       </div>
     </div>
   </div>
-    <body>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -90,6 +69,10 @@
       <div class="swiper-button-prev"></div>
     </div>
 
+@endsection
+
+@section('Scripts')
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -110,6 +93,5 @@
         },
       });
     </script>
-  </body>
-  <footer class="text-center">©  {{ date("Y") }} Lab23 Copyright.</footer>
-</x-guest-layout>
+
+@endsection
