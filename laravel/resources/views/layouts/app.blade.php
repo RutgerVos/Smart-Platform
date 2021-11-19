@@ -28,7 +28,7 @@
 		{{ config('smart-platform', 'smart-platform') }}
 	</a>
 	</h2>
-	<x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('/')">
+	<x-jet-nav-link href="{{ route('Home') }}" :active="request()->routeIs('/')">
 		{{ __('Home') }}
 	</x-jet-nav-link>
 	<x-jet-nav-link href="{{ route('Events') }}" :active="request()->routeIs('/Events')">
@@ -45,6 +45,18 @@
 			</x-jet-nav-link>
 		@endif
 	@endguest
+	@auth
+		<form method="POST" action="{{ route('logout') }}">
+			@csrf
+
+			<x-jet-nav-link href="{{ route('logout') }}"
+					onclick="event.preventDefault();
+					this.closest('form').submit();">
+				{{ __('Log Out') }}
+			</x-jet-nav-link>
+		</form>
+	@endauth
+
 	</div>
 
 		<!-- Page Content -->

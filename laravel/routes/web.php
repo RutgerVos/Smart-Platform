@@ -13,14 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('home');
+Route::get('/', function () { return view('home.index'); })->name('Home');
+Route::get('/Events', function () { return view('events.index'); })->name('Events');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth'])->group(function () {
 
-Route::get('/Events', function () {
-    return view('events.index');
-})->name('Events');
+});
