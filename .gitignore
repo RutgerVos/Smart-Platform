@@ -31,3 +31,5 @@ laravel/package-lock.json
 laravel/composer.json
 
 laravel/public/vendor
+
+laravel/resources/views/vendor/

@@ -24,15 +24,18 @@
 	<x-jet-banner />
 	<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 	<h2 class="font-semibold text-xl text-gray-800 leading-tight">
-	<a class="navbar-brand" href="{{ url('/') }}">
-		{{ config('smart-platform', 'smart-platform') }}
-	</a>
+		<a class="navbar-brand" href="{{ url('/') }}">
+			{{ config('smart-platform', 'smart-platform') }}
+		</a>
 	</h2>
 	<x-jet-nav-link href="{{ route('Home') }}" :active="request()->routeIs('/')">
 		{{ __('Home') }}
 	</x-jet-nav-link>
 	<x-jet-nav-link href="{{ route('Events') }}" :active="request()->routeIs('/Events')">
 		{{ __('Events') }}
+	</x-jet-nav-link>
+	<x-jet-nav-link href="{{ route('microcontroller-commands') }}" :active="request()->routeIs('/microcontroller-commands')">
+		{{ __('microcontroller commands') }}
 	</x-jet-nav-link>
 	@guest
 		<x-jet-nav-link href="{{ route('login') }}" :active="request()->routeIs('/login')">
