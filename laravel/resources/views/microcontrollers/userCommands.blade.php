@@ -11,36 +11,49 @@
 	document.onkeydown = function (e) {
 		switch (e.keyCode) {
 			case 32: //spacebar
-				ajaxCall('spacebar');
+				axiosCall('spacebar');
 				break;
 			case 37: //Left
-				ajaxCall('left');
+				axiosCall('left');
 				break;
 			case 38:  // Up
-				ajaxCall('up');
+				axiosCall('up');
 				break;
 			case 39: // Right
-				ajaxCall('right');
+				axiosCall('right');
 				break;
 			case 40: // Down
-				ajaxCall('down');
+				axiosCall('down');
 				break;
 		}
 	};
 
-	function ajaxCall(move) {
-		console.log(move);
-		$.ajax({
-			url: "MC/store",
-			type: "POST",
-			data: {
-				move: move
-			},
-			success: function () {
-				console.log("it works?")
-			}
-		});
-	}
+	function axiosCall(move) {
+		axios.post('api/MC/store', {
+			move: move
+		})
+		.then(function (response) {
+			console.log(response);
+		})
+		.catch(function (error) {
+			console.log(error);
+		})
+	};
+
+	// function ajaxCall(move) {
+	// 	console.log(move);
+	// 	$.ajax({
+	// 		url: "MC/store",
+	// 		type: "POST",
+	// 		data: {
+	// 			move: move
+	// 		},
+	// 		success: function () {
+	// 			console.log("it works?")
+	// 		}
+	// 	});
+	// }
+
 </script>
 @endsection
 

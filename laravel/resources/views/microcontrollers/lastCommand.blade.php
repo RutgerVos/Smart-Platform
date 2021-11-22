@@ -2,6 +2,6 @@
 
 @section('content')
 
-{{dd(robot_commands)}}
+{{ $robot }}
 
 @endsection

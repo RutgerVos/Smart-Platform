@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\MC;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MCController extends Controller
 {
@@ -24,10 +25,16 @@ class MCController extends Controller
 	 */
 	public function lastcommand($robot)
 	{
-		return view('microcontrollers.latestCommand',[
-			'robot_commands' => robot_commands::findOrFail($robot)->last()
-			//Actions::where('robot', input('robot'())->last();
-		]);
+		// 'robot_commands' => DB::table('robot_commands')->findOrFail($robot)->last()
+		//Actions::where('robot', input('robot'())->last();
+		$robot = 'robot';
+		return view('microcontrollers.lastCommand', compact('robot'));
+
+		// return view('microcontrollers.lastCommand')->with('robot', $robot);
+
+		// return view('microcontrollers.lastCommand',[
+		// 	'robot' => $robot
+		// ]);
 	}
 
 	/**
@@ -51,6 +58,7 @@ class MCController extends Controller
 		DB::table('robot_commands')->insertOrIgnore([
 			"action" => $request->move
 		]);
+		// INSERT INTO `robot_commands`(`action`) VALUES ("attack")
 	}
 
 	/**
