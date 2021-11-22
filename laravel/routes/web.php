@@ -24,3 +24,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/Events', function () {
     return view('events.index');
 })->name('Events');
+
+Route::get('/gyroscope', function () {
+    return view('phone.index');
+})->name('Gyroscope');

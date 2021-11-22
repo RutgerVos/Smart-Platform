@@ -1,10 +1,7 @@
-<!DOCTYPE html>
 <!-- saved from url=(0031)https://sensor-js.xyz/demo.html -->
-<html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gyroscope</title>
     <!-- <link
@@ -38,6 +35,7 @@
             margin-bottom: 0.66rem;
         }
     </style>
+    @livewireScripts
 </head>
 
 <body>
@@ -81,17 +79,8 @@
 
         </div>
     </main>
-    <!-- <footer class="footer">
-        <div class="container">
-            <span class="text-muted small">This page is hosted on GitHub Pages, please see GitHub's privacy statement
-                <a href="https://help.github.com/articles/github-privacy-statement/">here</a>.</span>
-        </div>
-    </footer> -->
     </body>
-</html>
-    @content('script')
     <script>
-
         function handleOrientation(event) {
             updateFieldIfNotNull('Orientation_a', event.alpha);
             updateFieldIfNotNull('Orientation_b', event.beta);
@@ -175,6 +164,4 @@
            document.getElementById("UserProximity").innerHTML="UserProximity: "+event.near;
         });
         */
-
     </script>
-    @endcontent
