@@ -35,7 +35,6 @@
             margin-bottom: 0.66rem;
         }
     </style>
-    @livewireScripts
 </head>
 
 <body>
@@ -80,7 +79,7 @@
         </div>
     </main>
     </body>
-    <script>
+    <script type="text/javascript">
         function handleOrientation(event) {
             updateFieldIfNotNull('Orientation_a', event.alpha);
             updateFieldIfNotNull('Orientation_b', event.beta);
