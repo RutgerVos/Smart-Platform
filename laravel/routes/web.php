@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,4 @@ Route::get('/Events', function () {
     return view('events.index');
 })->name('Events');
 
-Route::get('/gyroscope', function () {
-    return view('phone.index');
-})->name('Gyroscope');
+Route::get('/gyroscope', [PhoneController::class, 'index'])->name('gyroscope');

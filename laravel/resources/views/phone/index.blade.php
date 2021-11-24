@@ -36,7 +36,6 @@
         }
     </style>
 </head>
-
 <body>
     <main role="main" class="container">
         <div class="p-3 mb-2 bg-secondary" id="demo-div">
