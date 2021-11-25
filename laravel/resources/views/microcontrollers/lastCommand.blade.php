@@ -2,6 +2,6 @@
 
 @section('content')
 
-{{ $robot }}
+{{$lastCommand->action}}
 
 @endsection

@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\MCController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('home.index'); })->name('Home');
-Route::get('/Events', function () { return view('events.index'); })->name('Events');
-Route::get('/microcontroller-commands', function () { return view('microcontrollers.userCommands'); })->name('microcontroller-commands');
-Route::get('/latestCommand/{robot}', function () { return view('microcontrollers.lastcommand'); })->name('latestCommand');
+Route::get('/', [HomeController::class, 'index'])->name('Home');
+Route::get('/Events', [EventController::class, 'index'] )->name('Events');
+Route::get('/microcontroller-commands', [MCController::class, 'index'])->name('microcontroller-commands');
+Route::get('/latestCommand/{robot}', [MCController::class, 'lastCommand'])->name('latestCommand');
 
 
 Route::middleware(['auth'])->group(function () {

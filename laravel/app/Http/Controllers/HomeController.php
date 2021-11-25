@@ -5,6 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Home;
 use Illuminate\Http\Request;
 
+// the 3 ways you can send data to the view
+
+// return view('microcontrollers.lastCommand', compact('lastCommand'));
+
+// return view('microcontrollers.lastCommand')->with('robot', $robot);
+
+// return view('microcontrollers.lastCommand',['robot' => $robot]);
+
 class HomeController extends Controller
 {
     /**

@@ -39,28 +39,13 @@
 			console.log(error);
 		})
 	};
-
-	// function ajaxCall(move) {
-	// 	console.log(move);
-	// 	$.ajax({
-	// 		url: "MC/store",
-	// 		type: "POST",
-	// 		data: {
-	// 			move: move
-	// 		},
-	// 		success: function () {
-	// 			console.log("it works?")
-	// 		}
-	// 	});
-	// }
-
 </script>
 @endsection
 
 <!-- all main content of the page goes here -->
 @section('content')
 
-{{"hallo its working it seems"}}
+{{"hallo, its working it seems"}}
 
 @endsection
 

@@ -23,18 +23,14 @@ class MCController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function lastcommand($robot)
+	public function lastCommand($robot)
 	{
-		// 'robot_commands' => DB::table('robot_commands')->findOrFail($robot)->last()
-		//Actions::where('robot', input('robot'())->last();
-		$robot = 'robot';
-		return view('microcontrollers.lastCommand', compact('robot'));
+		// $lastCommand = MC::select("robot_commands")->where("robot", $robot)->latest()->get();
 
-		// return view('microcontrollers.lastCommand')->with('robot', $robot);
+		$lastCommand = DB::table('robot_commands')->where('robot', $robot)->orderByDesc('added_at')->first();
+		return view('microcontrollers.lastCommand', compact('lastCommand'));
 
-		// return view('microcontrollers.lastCommand',[
-		// 	'robot' => $robot
-		// ]);
+		// ->latest()
 	}
 
 	/**
